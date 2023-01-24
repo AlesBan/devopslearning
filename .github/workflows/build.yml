@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:  
+      - name: Environment
+        run: printenv 
       - name: Checkout
         uses: actions/checkout@v3
         
