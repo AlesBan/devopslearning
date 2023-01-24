@@ -18,11 +18,11 @@ jobs:
         run: printenv
         
       - name: Develop
-        if: ${{ env.GITHUB_REF == 'refs/heads/develop' }}
+        if: ${{ env.GITHUB_HEAD_REF == 'develop' }}
         run: echo "Running on develop"
         
       - name: Main
-        if: ${{ env.GITHUB_REF == 'refs/heads/main' }}
+        if: ${{ env.GITHUB_HEAD_REF == 'main' }}
         run: echo "Running on Main"
         
       - name: Checkout
