@@ -27,7 +27,7 @@ jobs:
         
       - name: Build
         run: dotnet build --no-restore
-        working-directory: $SOURCE_DIR
+        working-directory: ./TestApp
         
       - name: Test
         run: dotnet test --no-build --verbosity normal  
