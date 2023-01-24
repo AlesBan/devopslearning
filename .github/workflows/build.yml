@@ -23,12 +23,12 @@ jobs:
             dotnet-version: 5.0.x
             
       - name: Restore dependencies
-        run: cd $SOURCE_DIR && dotnet restore $PROJECT_NAME
+        run: cd ${{env.SOURCE_DIR}} && dotnet restore ${{env.PROJECT_NAME}}
         
       - name: Build
         run: dotnet build --no-restore
-        working-directory: ./TestApp
+        working-directory: ${{env.SOURCE_DIR}}
         
       - name: Test
         run: dotnet test --no-build --verbosity normal  
-        working-directory: $SOURCE_DIR
+        working-directory: ${{env.SOURCE_DIR}}
