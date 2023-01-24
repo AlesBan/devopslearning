@@ -47,7 +47,7 @@ jobs:
         
       - name: Pack
         working-directory: ${{env.SOURCE_DIR}}
-        run: dotnet publish --configuration Realese --output $OUTPUT
+        run: dotnet publish --configuration Release --output $OUTPUT
         
       - name: Create Deliverable
         uses: actions/download-artifact@v3.0.2
