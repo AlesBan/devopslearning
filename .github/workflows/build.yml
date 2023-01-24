@@ -6,6 +6,7 @@ on:
     
 env:
   SOURCE_DIR: ./TestApp
+  PROJECT_NAME: ./TestApp.sln
 
 jobs:
   build:
@@ -22,12 +23,12 @@ jobs:
             dotnet-version: 5.0.x
             
       - name: Restore dependencies
-        run: cd ./TestApp && dotnet restore ./TestApp.sln
+        run: cd $SOURCE_DIR && dotnet restore $PROJECT_NAME
         
       - name: Build
         run: dotnet build --no-restore
-        working-directory: ./TestApp
+        working-directory: $SOURCE_DIR
         
       - name: Test
         run: dotnet test --no-build --verbosity normal  
-        working-directory: ./TestApp
+        working-directory: $SOURCE_DIR
