@@ -7,6 +7,7 @@ on:
 env:
   SOURCE_DIR: ./TestApp
   PROJECT_NAME: ./TestApp.sln
+  OUTPUT: ~/output
 
 jobs:
   build:
@@ -43,3 +44,21 @@ jobs:
       - name: Test
         run: dotnet test --no-build --verbosity normal  
         working-directory: ${{env.SOURCE_DIR}}
+        
+      - name: Pack
+        working-directory: ${{env.SOURCE_DIR}}
+        run: dotnet publish --configuration Realese --output $OUTPUT
+        
+      - name: Create Deliverable
+        uses: actions/download-artifact@v3.0.2
+        with:
+          name: Build Result
+          path: ${{env.OUTPUT}}
+        
+        
+        
+        
+        
+        
+        
+        
