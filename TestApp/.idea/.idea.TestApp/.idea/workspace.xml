@@ -5,7 +5,16 @@
     <projectFile profileName="TestApp">TestApp/TestApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f97987e-5d20-4671-9cc2-2e1663c6765e" name="Changes" comment="" />
+    <list default="true" id="5f97987e-5d20-4671-9cc2-2e1663c6765e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TestApp/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TestApp/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.." beforeDir="false" afterPath="$PROJECT_DIR$/.." afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestApp/TestApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestApp/TestApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Базы данных/seed-app-sql-practice" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Базы данных/seed-app-sql-practice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Фронт_Клима/frontend-for-ppp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Фронт_Клима/frontend-for-ppp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,21 +27,28 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2KVN9aPzlewAbpk9yr9YYuZ6KJ9" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Azurite",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.TestApp">
+}]]></component>
+  <component name="RunManager" selected="Publish to folder.Publish TestApp to folder">
+    <configuration name="Publish TestApp to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/TestApp/bin/Release/net5.0/publish" target_framework="net5.0" uuid_high="-2996836887450662260" uuid_low="-7656029643236360678" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestApp" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/TestApp/TestApp.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net5.0" />
@@ -63,6 +79,16 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="TestApp/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="contextFolderPath" value="$PROJECT_DIR$" />
+          <option name="sourceFilePath" value="TestApp/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isPublishEnabled="true" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,6 +102,10 @@
       <workItem from="1674070733842" duration="2095000" />
       <workItem from="1674397837187" duration="85000" />
       <workItem from="1674555652233" duration="1692000" />
+      <workItem from="1674573826332" duration="1210000" />
+      <workItem from="1674742307779" duration="2345000" />
+      <workItem from="1674746640083" duration="8637000" />
+      <workItem from="1674766946179" duration="419000" />
     </task>
     <task id="LOCAL-00001" summary="create proj">
       <created>1674055688128</created>
