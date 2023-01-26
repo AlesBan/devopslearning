@@ -1,0 +1,45 @@
+name: Build
+
+on:
+  push: 
+    branches: [ "develop", "main" ]
+    
+env:
+  SOURCE_DIR: ./TestApp
+  PROJECT_NAME: ./TestApp.sln
+
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+    
+    steps:  
+      - name: Environment
+        run: printenv
+        
+      - name: Develop
+        if: ${{ env.GITHUB_HEAD_REF == 'develop' }}
+        run: echo "Running on develop"
+        
+      - name: Main
+        if: ${{ env.GITHUB_HEAD_REF == 'main' }}
+        run: echo "Running on Main"
+        
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+            dotnet-version: 5.0.x
+            
+      - name: Restore dependencies
+        run: cd ${{env.SOURCE_DIR}} && dotnet restore ${{env.PROJECT_NAME}}
+        
+      - name: Build
+        run: dotnet build --no-restore
+        working-directory: ${{env.SOURCE_DIR}}
+        
+      - name: Test
+        run: dotnet test --no-build --verbosity normal  
+        working-directory: ${{env.SOURCE_DIR}}
