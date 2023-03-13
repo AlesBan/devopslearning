@@ -7,6 +7,7 @@ on:
 env:
   SOURCE_DIR: ./TestApp
   PROJECT_NAME: ./TestApp.sln
+  OUTPUT: ~/output
 
 jobs:
   build:
@@ -15,7 +16,12 @@ jobs:
     
     steps:  
       - name: Environment
-        run: printenv
+        run: |
+          echo "OUTPUT=$GITHUB_WORKSPACE/OUTPUT" >> $GITHUB_ENV
+          echo "Output folder is:"
+          echo "$OUTPUT"
+           
+        
         
       - name: Develop
         if: ${{ env.GITHUB_HEAD_REF == 'develop' }}
@@ -43,3 +49,21 @@ jobs:
       - name: Test
         run: dotnet test --no-build --verbosity normal  
         working-directory: ${{env.SOURCE_DIR}}
+        
+      - name: Pack
+        working-directory: ${{env.SOURCE_DIR}}
+        run: dotnet publish --configuration Release --output $OUTPUT
+        
+      - name: Create Deliverable
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: Build Result
+          path: ${{ env.OUTPUT }}
+        
+        
+        
+        
+        
+        
+        
+        
